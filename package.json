@@ -2,14 +2,14 @@
   "name": "api-node-utilities",
   "version": "1.0.0",
   "description": "Node API for requesting utilities",
-  "main": "app.js",
+  "main": "server.js",
   "author": "noziX",
   "license": "MIT",
   "engines":{
     "node": "16.x"
   },
   "scripts": {
-    "start": "node app.js",
+    "start": "node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
