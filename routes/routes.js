@@ -2,9 +2,12 @@
 const express = require('express');
 const router = express.Router();
 const cpfValidationHandler = require('../handlers/cpfValidation');
-const barcodeHandler = require('../handlers/barcode');
+const {postBarcodeHandler} = require('../handlers/barcode');
+const {getBarcodeHandler} = require('../handlers/barcode');
 
 router.post('/cpfValidation', cpfValidationHandler);
-router.post('/barcode', barcodeHandler);
+/* router.get('/barcode/:digits', cpfValidationHandler); */
+router.post('/barcode/', postBarcodeHandler);
+router.get('/barcode/:digits', getBarcodeHandler);
 
 module.exports = router;
