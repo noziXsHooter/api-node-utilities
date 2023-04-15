@@ -6,10 +6,10 @@ const getAdressByCep = require('../handlers/adressByCep');
 const { postBarcodeHandler } = require('../handlers/barcode');
 const { getBarcodeHandler } = require('../handlers/barcode');
 
-router.post('/cpf-validation', cpfValidationHandler);
-router.post('/address-by-cep', getAdressByCep);
+router.post('/api/cpf-validation', cpfValidationHandler);
+router.post('/api/address-by-cep', getAdressByCep);
 /* router.get('/barcode/:digits', cpfValidationHandler); */
-router.post('/barcode/', postBarcodeHandler);
-router.get('/barcode/:digits', getBarcodeHandler);
+router.post('/api/barcode/', postBarcodeHandler);
+router.get('/api/barcode/:digits', getBarcodeHandler);
 
 module.exports = router;
